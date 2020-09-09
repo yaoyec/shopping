@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('user/',include('user.urls')),
     path('commodity/',include('commodity.urls')),
+    # 跨域测试
+    path('test_cross', views.test_cross),
+    path('test_cross_server', views.test_cross_server),
 ]
