@@ -23,4 +23,6 @@ urlpatterns = [
     # 跨域测试
     path('test_cross', views.test_cross),
     path('test_cross_server', views.test_cross_server),
+    # 搜索功能
+    path('search/', include('haystack.urls')),
 ]
